@@ -16,3 +16,6 @@ To run the tests, you can use the following command:
 go test ./engine -v
 ```
 *The `-v` is just for verbose output (if you want to see the loss values for each epoch).*
+
+## Note
+This project made just for educational purposes. It does not follows the best practices of Go (and nor it is intended to).
