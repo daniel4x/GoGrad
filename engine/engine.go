@@ -110,6 +110,22 @@ func (v *Value) Backward() {
 	}
 }
 
+func (v *Value) Data() float64 {
+	return v.data
+}
+
+func (v *Value) SetData(data float64) {
+	v.data = data
+}
+
+func (v *Value) Grad() float64 {
+	return v.grad
+}
+
+func (v *Value) ZeroGrad() {
+	v.grad = 0
+}
+
 func (v Value) String() string {
 	return fmt.Sprintf("Value(label=%s, data=%f, children=(%v), op=%s, grad=%f)", v.label, v.data, v.children, v.op, v.grad)
 }
@@ -126,7 +142,7 @@ func validateValue(candidate interface{}) *Value {
 }
 
 // Helper functions to create Value slices and matrices (Tensor like objects)
-func makeValues(data []float64) []*Value {
+func MakeValues(data []float64) []*Value {
 	/**
 	 * Create a slice of Value pointers from a slice of float64.
 	 **/
@@ -137,13 +153,13 @@ func makeValues(data []float64) []*Value {
 	return ans
 }
 
-func makeValueMatrix(data [][]float64) [][]*Value {
+func MakeValueMatrix(data [][]float64) [][]*Value {
 	/**
 	 * Create a matrix of Value pointers from a matrix of float64.
 	 **/
 	ans := make([][]*Value, len(data))
 	for i := 0; i < len(data); i++ {
-		ans[i] = makeValues(data[i])
+		ans[i] = MakeValues(data[i])
 	}
 	return ans
 }

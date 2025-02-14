@@ -6,7 +6,7 @@ import (
 )
 
 func TestMLPSimpleScenario(t *testing.T) {
-	x := makeValueMatrix(
+	x := MakeValueMatrix(
 		[][]float64{
 			{2.0, 3.0, -1.0},
 			{3.0, -1.0, 0.5},
