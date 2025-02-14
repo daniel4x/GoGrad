@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/daniel4x/gograd/engine"
+	"github.com/daniel4x/GoGrad/engine"
 )
 
 func main() {
