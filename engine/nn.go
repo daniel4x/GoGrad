@@ -1,6 +1,9 @@
 package engine
 
-import "math/rand"
+import (
+	"fmt"
+	"math/rand"
+)
 
 /**
  * The structs and functions in this file are used to create a simple feedforward neural network (MLP).
@@ -41,6 +44,12 @@ func NewNeuron(in int) *Neuron {
 	return &Neuron{weights: weights, bias: bias}
 }
 
+func (n *Neuron) String() string {
+	ans := "Neuron{"
+	ans += fmt.Sprintf("Weights=%v, ", len(n.weights))
+	return ans + "Bias}"
+}
+
 type Layer struct {
 	neurons []*Neuron
 }
@@ -68,6 +77,15 @@ func NewLayer(in, out int) *Layer {
 	}
 
 	return &Layer{neurons: neurons}
+}
+
+func (l *Layer) String() string {
+	ans := "Layer{\n"
+	for i := 0; i < len(l.neurons); i++ {
+		ans += "\t\t" + l.neurons[i].String() + ",\n"
+	}
+	ans += "\t}"
+	return ans
 }
 
 type MLP struct {
@@ -105,4 +123,13 @@ func NewMLP(in int, outs []int) *MLP {
 	}
 
 	return &MLP{layers: layers}
+}
+
+func (m *MLP) String() string {
+	ans := "MLP{\n"
+	for i := 0; i < len(m.layers); i++ {
+		ans += "\t" + m.layers[i].String() + ",\n"
+	}
+	ans += "}"
+	return ans
 }
