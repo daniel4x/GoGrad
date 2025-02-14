@@ -4,7 +4,7 @@
   <img src="./artifacts/gograd.png" width="400" height="400">
 </p>
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/daniel4x/gograd)](https://pkg.go.dev/github.com/daniel4x/gograd)
+[![Go Reference](https://pkg.go.dev/badge/github.com/daniel4x/GoGrad)](https://pkg.go.dev/github.com/daniel4x/GoGrad)
 
 ## Introduction
 This project is an educational project for implementing computational graphs in Golang. The project is inspired by the [nn-zero-to-hero](https://github.com/karpathy/nn-zero-to-hero) by Andrej Karpathy. The project is intended to be a learning resource for understanding the basics of computational graphs and how they can be implemented in Golang. The project is not intended to be a full-fledged deep learning library.
