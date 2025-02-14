@@ -1,7 +1,8 @@
 # GoGrad 
 &middot; 
 [![Go Reference](https://pkg.go.dev/badge/github.com/daniel4x/GoGrad)](https://pkg.go.dev/github.com/daniel4x/GoGrad) 
-[![Build Status](https://github.com/daniel4x/gograd/actions/workflows/test.yml/badge.svg)](https://github.com/daniel4x/gograd/actions) 
+[![Go](https://github.com/daniel4x/GoGrad/actions/workflows/go.yml/badge.svg)](https://github.com/daniel4x/GoGrad/actions/workflows/go.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/daniel4x/GoGrad)](https://goreportcard.com/report/github.com/daniel4x/GoGrad)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 <p align="center">
