@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"gograd/engine"
+
+	"github.com/daniel4x/gograd/engine"
 )
 
 func main() {
